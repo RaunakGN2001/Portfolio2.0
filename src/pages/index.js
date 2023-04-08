@@ -3,8 +3,27 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/organisms/navbar'
+import { Box, Text } from '@chakra-ui/react'
+import LinkedInLogo from '@/components/SVG/linkedin'
+import GithubLogo from '@/components/SVG/github'
+import TwitterLogo from '@/components/SVG/twitter'
 
 const inter = Inter({ subsets: ['latin'] })
+
+
+const MyImageOnLandingPage = (props) => {
+  return (
+    <Image
+      // loader={myLoader}
+      src="/me.jpg"
+      alt="Picture of the author"
+      width={200}
+      height={200}
+      blurDataURL='/me.jpg'
+      loading='lazy'
+    />
+  )
+}
 
 export default function Home() {
   return (
@@ -16,9 +35,22 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Navbar />
-        {/* this is the div for the background  */}
-        <div className={styles.center}> </div>
+        <Box paddingTop='3rem' display='flex' flexDirection='column' justifyContent='center' alignItems='center' marginLeft='auto' marginRight='auto' width={['75%', '75%', '65%']}>
+          <Box borderRadius='50%' overflow='hidden'>  
+            <MyImageOnLandingPage />
+          </Box>
+          <Text fontWeight='bold' marginTop='2rem' fontSize={["15px", "20px", "25px"]}>Hey there 👋 This is Raunak </Text>
+          <Text fontSize={["12px", "15px", "17px"]} color='gray.400' align='center' marginTop='1rem'>
+          Upcoming Summer Intern @ PwC · TA @ Coding Ninjas · EE @ IIEST Shibpur 
+          </Text>
+          <Text fontSize={["12px", "15px", "17px"]} color='gray.400'>· Tech Enthusiast · Student Developer
+          </Text>
+          <Box display='flex' gap='1.5rem' marginTop='2rem'> 
+            <LinkedInLogo classname = 'socialsLogo' />
+            <GithubLogo classname = 'socialsLogo' />
+            <TwitterLogo classname = 'socialsLogo' />
+          </Box>
+        </Box>
       </main>
     </>
   )

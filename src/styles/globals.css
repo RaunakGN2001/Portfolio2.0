@@ -100,6 +100,20 @@ a {
   text-decoration: none;
 }
 
+.socialsLogo {
+  opacity: 0.4;
+  transition: 200ms ease-in-out;
+}
+
+.socialsLogo:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+b {
+  font-weight: 800;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.18",
     "@chakra-ui/react": "^2.5.5",
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
     "@fontsource/jetbrains-mono": "^4.5.12",
+    "@fontsource/open-sans": "^4.5.14",
     "eslint": "8.37.0",
     "eslint-config-next": "13.3.0",
     "framer-motion": "^10.11.2",
