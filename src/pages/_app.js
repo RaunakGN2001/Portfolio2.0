@@ -5,7 +5,7 @@ import theme from '../theme'
 import Navbar from '@/components/organisms/navbar'
 export default function App({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider>
       {/* this is the div for the background  */}
       <Navbar />
       <div className={styles.center}> </div>
