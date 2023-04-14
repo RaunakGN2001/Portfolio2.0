@@ -2,6 +2,17 @@ import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPane
 import React from 'react'
 import Link from 'next/link'
 import AccordionComponent from '@/components/organisms/accordion'
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
+} from '@chakra-ui/react'
 
 const AboutMe = () => {
   return (
@@ -23,14 +34,52 @@ const AboutMe = () => {
         </Box>
 
 
-        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full'>Achievements</Text>
-        <Box paddingInline='1rem' marginTop='1rem'>
+        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Achievements'>Achievements</Text>
+        <Box paddingInline='1rem' marginTop='1rem' >
           <ul className='Achievements-list'>
             <li><Text>600+ problems solved in <a className='links' href='/'>Leetcode ↗</a>, <a href='' className='links'>CodeChef ↗</a> and <a href='' className='links'>Codeforces ↗</a> combined.</Text></li>
-            <li><Text>4 star rated in CodeChef ( Max Rating: 1974 - Old Rating System )</Text></li>
-            <li><Text>Pupil in Codeforces ( Max Rating: 1255 )</Text></li>
+            <li><Text><b>4 star</b> rated in CodeChef ( Max Rating: 1974 - Old Rating System )</Text></li>
+            <li><Text><b>Pupil</b> in Codeforces ( Max Rating: 1255 )</Text></li>
+            <li><Text>Secured <b>Global Rank 768</b> in January Cook-Off 2022 Division 2.</Text></li>
+            <li><Text>Cleared <b>Qualification Round with 44 points</b> enabling me to proceed to Round 1 where I secured a <b>Global Rank of 7975</b> in the renowned <b>Google Code Jam 2022</b></Text></li>
+            <li><Text>My team <b>Binary Beasts</b> despite being a two-person team, achieved a <b>Global Ranking of 2580</b> in the prestigious <b>Google Hash Code Competition 2022</b></Text></li>
+            <li><Text>Our team secured the <b>second position</b> in the Mini Project Competition organized by our university, IIEST Shibpur. Our project, which utilized <b>Computer Vision to control Illumination of Electrical Appliances</b>, was a unique and innovative solution that impressed the judges and audience alike. It was a testament to the hard work and creativity of our team." </Text></li>
           </ul>
         </Box>
+
+
+        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Achievements'>Academics</Text>
+        <Text marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
+
+        <TableContainer marginTop={'2rem'} border={'1px solid black'} font>
+          <Table size={'md'} variant={'striped'} colorScheme='blackAlpha'>
+            <Thead>
+              <Tr>
+                <Th>Semester</Th>
+                <Th>SGPA</Th>
+              </Tr>
+            </Thead>
+            <Tbody>
+              <Tr>
+                <Td>1st</Td>
+                <Td>9.38</Td>
+              </Tr>
+              <Tr>
+                <Td>2nd</Td>
+                <Td>8.46</Td>
+              </Tr>
+              <Tr>
+                <Td>3rd</Td>
+                <Td>8.77</Td>
+              </Tr>
+              <Tr>
+                <Td>4th</Td>
+                <Td>7.54</Td>
+              </Tr>
+            </Tbody>
+          </Table>
+        </TableContainer>
+
       </Box>
 
     </Box>

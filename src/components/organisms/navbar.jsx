@@ -13,6 +13,7 @@ const ActiveLink = (href) => {
 
     if(router.asPath === href) return {
         fontWeight: 'bold',
+        color:'#d81159'
     }
     else return {        
     }
@@ -31,14 +32,14 @@ const Navbar = () => {
 
 
     return (
-        <Box width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem'>
+        <Box className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem'>
             <Box><Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link></Box>
             <Box display={{ sm: 'none', md: 'none', lg: 'flex' }}>
-                <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem'>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer' }}><Link href='/uses' style={ActiveLink('/uses')}>Uses</Link></ListItem>
+                <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' fontWeight='medium'>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href='/uses' style={ActiveLink('/uses')}>Uses</Link></ListItem>
                 </List>
             </Box>
             <Box display={{ sm: 'flex', md: 'flex', lg: 'none' }}>
