@@ -1,7 +1,6 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text } from '@chakra-ui/react'
 import React from 'react'
 import Link from 'next/link'
-import AccordionComponent from '@/components/organisms/accordion'
 import {
   Table,
   Thead,
@@ -13,6 +12,10 @@ import {
   TableCaption,
   TableContainer,
 } from '@chakra-ui/react'
+import { Divider } from '@chakra-ui/react'
+
+import AccordionComponent from '@/components/organisms/accordion'
+
 
 const AboutMe = () => {
   return (
@@ -48,7 +51,7 @@ const AboutMe = () => {
         </Box>
 
 
-        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Achievements'>Academics</Text>
+        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Academics'>Academics</Text>
         <Text marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
 
         <TableContainer marginTop={'2rem'} border={'1px solid black'} font>
@@ -79,6 +82,21 @@ const AboutMe = () => {
             </Tbody>
           </Table>
         </TableContainer>
+
+        <Text fontSize={["13px", "18px", "23px"]} fontWeight={'bold'} marginTop={'1rem'}>Courses Taken:</Text>
+        <Box paddingInline='1rem' marginTop={'0.5rem'} fontWeight={'medium'}>
+          <ul className='Course-list'>
+            <li><Text>Digital Electronics</Text></li>
+            <li><Text>Analog Electronics</Text></li>
+            <li><Text>Signal and Systems</Text></li>
+            <li><Text>Electrical Machines</Text></li>
+            <li><Text>Power Electronics</Text></li>
+            <li><Text>Control Systems</Text></li>
+            <li><Text>Microprocessor and Microcontroller</Text></li>
+            
+          </ul>
+        </Box>
+
 
       </Box>
 

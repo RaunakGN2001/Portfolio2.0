@@ -1,6 +1,7 @@
 import React from 'react'
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
+import Link from 'next/link'
 
 const AccordionComponent = () => {
   return (
@@ -17,12 +18,12 @@ const AccordionComponent = () => {
           <AccordionPanel pb={4}>
             <List>
 
-              <ListItem _hover={{ textDecoration: 'underline', cursor: 'pointer' }}><ListIcon as={ChevronRightIcon} />
-                Achievements
+              <ListItem _hover={{ textDecoration: 'underline', cursor: 'pointer' }} ><ListIcon as={ChevronRightIcon} />
+                <Link href={'#Achievements'}>Achievements</Link>
               </ListItem>
               <ListItem _hover={{ textDecoration: 'underline', cursor: 'pointer' }}>
                 <ListIcon as={ChevronRightIcon} />
-                Academics</ListItem>
+                <Link href={'#Academics'}>Academics</Link></ListItem>
             </List>
           </AccordionPanel>
         </AccordionItem>
