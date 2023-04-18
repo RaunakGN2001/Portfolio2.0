@@ -15,6 +15,7 @@ import {
 import { Divider } from '@chakra-ui/react'
 
 import AccordionComponent from '@/components/organisms/accordion'
+import Footer from './footer'
 
 
 const AboutMe = () => {
@@ -99,7 +100,7 @@ const AboutMe = () => {
 
 
       </Box>
-
+    <Footer />
     </Box>
   )
 }
