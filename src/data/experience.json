@@ -12,8 +12,12 @@
         "Teaching Assistant"
     ],
     "imageURL": [
-        "https://drive.google.com/uc?export=view&id=10WRsY0AKwQjiZLQvRrxnaYdHbJdhu9Kj",
-        "https://drive.google.com/uc?export=view&id=1T6KteXXaH8VAsE0_hjxqgMqpN2Xu19NH"
+        "/images/GWOC_logo.png",
+        "/images/CN_logo.jpg"
+    ],
+    "proofOfWork": [
+        "https://drive.google.com/file/d/1VrM5M2V90HsquC2_OrJf9bdhZSCOMGbO/view?usp=share_link",
+        "https://drive.google.com/file/d/1lSlZ-_0GNU64bUBTSvp02G0rjfVOQHt0/view?usp=share_link"
     ],
     "responsibilities": [
         ["GirlScript Winter of Contributing is a three-month newly established initiative by GirlScript Foundation that's conducted during winters.",
