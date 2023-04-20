@@ -2,11 +2,11 @@ import { Box, Text } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
 
-const ExperienceCard = ( { name, period, role, imageURL, responsibilities } ) => {
+const ExperienceCard = ( { name, period, role, imageURL, proofOfWork, responsibilities } ) => {
   return (
     <Box borderBottom='1px solid #efefef' display={'flex'} flexDirection={['column', 'column', 'row']} width='100%' gap={'3rem'} marginBottom={'3rem'} paddingBottom={'3rem'}>
         <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} gap={'1rem'}>
-            <img src={imageURL} width={'400px'} />
+            <img src={imageURL} width={'400px'} loading='lazy'/>
             <Text fontWeight={'medium'} fontSize={["15px", "17px", "20px"]}>{name}</Text>
         </Box>
         <Box>
@@ -16,6 +16,7 @@ const ExperienceCard = ( { name, period, role, imageURL, responsibilities } ) =>
                     return <li>{eachResp}</li>
                 })}
             </Box>
+            <Text textDecoration={'underline'} marginTop={'1rem'} fontWeight={'bold'}><a href={proofOfWork} target='_blank'>Proof of Work ↗ </a></Text>
         </Box>        
     </Box>
   )
