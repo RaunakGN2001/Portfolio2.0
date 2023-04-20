@@ -16,6 +16,7 @@ import { Divider } from '@chakra-ui/react'
 
 import AccordionComponent from '@/components/organisms/accordion'
 import Footer from './footer'
+import CustomHeading from '@/components/organisms/customHeading'
 
 
 const AboutMe = () => {
@@ -23,7 +24,7 @@ const AboutMe = () => {
     <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='3rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
 
 
-      <Text fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full'>About</Text>
+      <CustomHeading title={'About'} marginBottom={'1rem'} />
       <AccordionComponent />
 
 
