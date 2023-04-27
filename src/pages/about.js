@@ -34,12 +34,12 @@ const AboutMe = () => {
         <Text fontWeight='medium' marginTop='1rem'>As an undergraduate student, I possess a profound passion for expanding my horizons and experimenting with novel ideas as I journey forward. Join me as we embark on an exciting voyage of discovery and innovation.</Text>
 
 
-        <Box display='flex' alignItems='center' fontWeight='bold'>
+        <Box display='flex' alignItems='center' fontWeight='bold' marginBottom={'2rem'}>
           <Text _hover={{ color: '#d81159' }} marginTop='1rem' textDecor='underline' transition='100ms ease-in-out' ><Link href=''>My Resume ↗ </Link></Text>
         </Box>
 
 
-        <Text marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Achievements'>Achievements</Text>
+        <CustomHeading title={'Achievements'} marginBottom={'1rem'} />
         <Box paddingInline='1rem' marginTop='1rem' >
           <ul className='Achievements-list'>
             <li><Text>600+ problems solved in <a className='links' href='/'>Leetcode ↗</a>, <a href='' className='links'>CodeChef ↗</a> and <a href='' className='links'>Codeforces ↗</a> combined.</Text></li>
