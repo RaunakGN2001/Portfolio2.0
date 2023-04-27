@@ -121,6 +121,19 @@ a {
   opacity: 1;
 }
 
+
+.socialsLogoInContactPage {
+  filter: saturate(0%);
+  opacity: 0.5;
+  transition: 200ms ease-in-out;
+}
+
+.socialsLogoInContactPage:hover {
+  cursor: pointer;
+  opacity: 1;
+  filter: saturate(100%);
+}
+
 b {
   font-weight: 800;
 }

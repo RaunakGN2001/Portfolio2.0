@@ -34,8 +34,8 @@ const AboutMe = () => {
         <Text fontWeight='medium' marginTop='1rem'>As an undergraduate student, I possess a profound passion for expanding my horizons and experimenting with novel ideas as I journey forward. Join me as we embark on an exciting voyage of discovery and innovation.</Text>
 
 
-        <Box display='flex' alignItems='center' _hover={{ color: '#0066b2' }} fontWeight='bold'>
-          <Text marginTop='1rem' textDecor='underline' transition='100ms ease-in-out' ><Link href=''>My Resume ↗ </Link></Text>
+        <Box display='flex' alignItems='center' fontWeight='bold'>
+          <Text _hover={{ color: '#d81159' }} marginTop='1rem' textDecor='underline' transition='100ms ease-in-out' ><Link href=''>My Resume ↗ </Link></Text>
         </Box>
 
 
