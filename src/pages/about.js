@@ -13,6 +13,7 @@ import {
   TableContainer,
 } from '@chakra-ui/react'
 import { Divider } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 import AccordionComponent from '@/components/organisms/accordion'
 import Footer from './footer'
@@ -29,7 +30,15 @@ const AboutMe = () => {
   return (
     <>
     <Navbar />
-    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+    <Box as={motion.div} 
+      initial={{ x: 300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    exit={{ x: 300, opacity: 0 }}
+    transition={{
+      type: "ease-in-out",
+      stiffness: 260,
+      damping: 20,
+    }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
 
 
       <CustomHeading title={'About'} marginBottom={'1rem'} />
