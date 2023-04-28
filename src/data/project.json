@@ -1,24 +1,19 @@
-{   
+{
     "name": [
         "Interacto",
-        "Illumination Control Using Computer Vision",
-        "Createevity"
-
+        "Illumination Control Using Computer Vision"
     ],
     "techStack": [
         "ReactJS · NodeJS · ExpressJS · Socket.io · Mongo DB",
-        "Computer Vision · Hand Gesture Recognition · OpenCV · Arduino",
-        "NextJS · Chakra UI · Strapi Headless CMS · SQLite"
+        "Computer Vision · Hand Gesture Recognition · OpenCV · Arduino"
     ],
     "imageURL": [
         "/images/Interacto_Banner.jpg",
-        "/images/Illumination_Banner.jpg",
-        "/images/Createevity_Banner.png"
+        "/images/Illumination_Banner.jpg"
     ],
     "githubLink": [
         "https://github.com/RaunakGN2001/InteractO",
-        "https://github.com/RaunakGN2001/Illumination-Control-Using-Computer-Vision",
-        "https://github.com/RaunakGN2001/Createevity"
+        "https://github.com/RaunakGN2001/Illumination-Control-Using-Computer-Vision"
     ],
     "description": [
         ["InteractO is a Full Stack Chatting Application that uses Socket.io for real time communication and stores user details in encrypted format in Mongo DB Database.",
@@ -27,7 +22,6 @@
         ["This project focuses on control of brightness of LED Lamp via Hand Gestures through Computer Vision technology thereby rejecting the age old method of switch based control and also demonstrates the potential of Hand Gesture Recognition Technology and its applications in real world scenarios.",
         "The Hand-Gesture Recognition Module has been implemented using Python programming language. It contains a handDetector Class that accepts RGB Images and searches for hands in the same. Also it has the added functionality of figuring out how many fingers are up and distance between any two fingers. OpenCV-Python and Mediapipe are two of the major Python libraries used in the project.",
         "The Arduino Nano (V3) is responsible for maintaining a Serial Communication between the Python program and the electrical appliance ( LEDs in this case )."
-        ],
-        ["Createevity is a full-stack dynamic blog site that has been developed using NextJs, Chakra-UI, and Strapi Headless CMS. The site's backend is built with Strapi, which uses SQLite as its database, and is deployed on Render's free tier.", "Createevity features a search bar that enables users to quickly find the desired blog. Pagination functionality has been provided to ensure that blog posts are displayed in a user-friendly way.", "The app's article list has been optimized for SEO and is initially fetched on the server-side. The list is paginated on the client-side for faster load times.", "Blogs on Createevity can be categorized based on the user's choice, allowing visitors to easily find content that interests them. The site's styling has been done using Chakra-UI, making it visually appealing and easy to navigate."]
+        ]
     ]
 }

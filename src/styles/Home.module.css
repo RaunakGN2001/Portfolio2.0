@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   max-height: 100vh;
-  padding-top: 7rem;
 }
 
 
@@ -17,20 +16,19 @@
 .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+  width: 480px;
+  height: 550px;
+  overflow: hidden;
 
 }
 
 .center::after {
   background: var(--primary-glow);
-  width:100vw;
+  width:940px;
   height: 60vh;
-
   /* justify-content: center; */
   top: 20px;
-  z-index: -2;
+  z-index: -1;
 }
 
 .center::before,
