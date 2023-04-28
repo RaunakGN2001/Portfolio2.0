@@ -143,7 +143,8 @@ b {
 }
 
 .links:hover {
-  color: #0066b2;
+  color: #eb2d72;
+  text-decoration: underline;
 }
 
 

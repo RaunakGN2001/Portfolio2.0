@@ -3,6 +3,7 @@ import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import Footer from './footer';
 import CustomHeading from '@/components/organisms/customHeading';
+import Navbar from '@/components/organisms/navbar';
 
 
 
@@ -18,7 +19,9 @@ const responsibilitiesArr = experienceObject["responsibilities"];
 const Experiences = () => {
 
   return (
-    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='3rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+    <>
+    <Navbar />
+    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
       <CustomHeading title={'Experiences'} marginBottom={'3rem'} />
 
       <ExperienceCard name={nameArr[1]} period={periodArr[1]} role={roleArr[1]} imageURL={imageURLArr[1]} proofOfWork={proofOfWorkArr[1]} responsibilities={responsibilitiesArr[1]} lastCard={false} />
@@ -27,6 +30,7 @@ const Experiences = () => {
 
     <Footer />
     </Box>
+    </>
   )
 }
 

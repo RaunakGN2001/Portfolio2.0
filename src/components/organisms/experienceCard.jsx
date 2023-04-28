@@ -1,6 +1,7 @@
 import { Box, Text, useColorModeValue } from '@chakra-ui/react'
 import Image from 'next/image'
 import React from 'react'
+import CustomLink from './customLink';
 
 const ExperienceCard = ( { name, period, role, imageURL, proofOfWork, responsibilities, lastCard } ) => {
     console.log(lastCard);
@@ -16,12 +17,12 @@ const ExperienceCard = ( { name, period, role, imageURL, proofOfWork, responsibi
         </Box>
         <Box>
             <Text backgroundColor={roleCardBG} textAlign={'center'} color={'white'} marginBottom={'1.5rem'} fontWeight={'bold'} fontSize={["15px", "17px", "20px"]}>{role} ︱ {period}</Text>
-            <Box>
+            <Box marginBottom='1rem'>
                 {responsibilities.map((eachResp) => {
                     return <li>{eachResp}</li>
                 })}
             </Box>
-            <Text textDecoration={'underline'} marginTop={'1rem'} fontWeight={'bold'}><a href={proofOfWork} target='_blank'>Proof of Work ↗ </a></Text>
+            <CustomLink text='Proof of Work' url={proofOfWork} marginTop='1rem' />
         </Box>        
     </Box>
   )

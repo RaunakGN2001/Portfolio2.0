@@ -1,4 +1,4 @@
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text } from '@chakra-ui/react'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import Link from 'next/link'
 import {
@@ -17,11 +17,19 @@ import { Divider } from '@chakra-ui/react'
 import AccordionComponent from '@/components/organisms/accordion'
 import Footer from './footer'
 import CustomHeading from '@/components/organisms/customHeading'
+import CustomLink from '@/components/organisms/customLink'
+import CustomLinkSGPA from '@/components/organisms/customLinkSGPA'
+import Navbar from '@/components/organisms/navbar'
 
 
 const AboutMe = () => {
+
+  const tableColorScheme = useColorModeValue('blackAlpha', 'whiteAlpha');
+
   return (
-    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='3rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+    <>
+    <Navbar />
+    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
 
 
       <CustomHeading title={'About'} marginBottom={'1rem'} />
@@ -35,20 +43,21 @@ const AboutMe = () => {
 
 
         <Box display='flex' alignItems='center' fontWeight='bold' marginBottom={'2rem'}>
-          <Text _hover={{ color: '#d81159' }} marginTop='1rem' textDecor='underline' transition='100ms ease-in-out' ><Link href=''>My Resume ↗ </Link></Text>
+          {/* <Text _hover={{ color: '#eb2d72' }} marginTop='1rem' textDecor='underline' transition='100ms ease-in-out' ><Link href=''>My Resume ↗ </Link></Text> */}
+          <CustomLink text='Resume' url='' marginTop='1rem' />
         </Box>
 
 
         <CustomHeading title={'Achievements'} marginBottom={'1rem'} />
         <Box paddingInline='1rem' marginTop='1rem' >
           <ul className='Achievements-list'>
-            <li><Text>600+ problems solved in <a className='links' href='/'>Leetcode ↗</a>, <a href='' className='links'>CodeChef ↗</a> and <a href='' className='links'>Codeforces ↗</a> combined.</Text></li>
+            <li><Text>600+ problems solved in <CustomLink text='Leetcode' url='' marginTop='' />, <CustomLink text='CodeChef' url='' marginTop='' /> and <CustomLink text='Codeforces' url='' marginTop='' /> combined.</Text></li>
             <li><Text><b>4 star</b> rated in CodeChef ( Max Rating: 1974 - Old Rating System )</Text></li>
             <li><Text><b>Pupil</b> in Codeforces ( Max Rating: 1255 )</Text></li>
             <li><Text>Secured <b>Global Rank 768</b> in January Cook-Off 2022 Division 2.</Text></li>
-            <li><Text>Cleared <b>Qualification Round with 44 points</b> enabling me to proceed to Round 1 where I secured a <b>Global Rank of 7975</b> in the renowned <b>Google Code Jam 2022</b></Text></li>
-            <li><Text>My team <b>Binary Beasts</b> despite being a two-person team, achieved a <b>Global Ranking of 2580</b> in the prestigious <b>Google Hash Code Competition 2022</b></Text></li>
-            <li><Text>Our team secured the <b>second position</b> in the Mini Project Competition organized by our university, IIEST Shibpur. Our project, which utilized <b>Computer Vision to control Illumination of Electrical Appliances</b>, was a unique and innovative solution that impressed the judges and audience alike. It was a testament to the hard work and creativity of our team." </Text></li>
+            <li><Text>Cleared <b>Qualification Round with 44 points</b> enabling me to proceed to Round 1 where I secured a <b>Global Rank of 7975</b> in the renowned <CustomLink text='Google Code Jam 2022' url='' marginTop='' /></Text></li>
+            <li><Text>My team <b>Binary Beasts</b> despite being a two-person team, achieved a <b>Global Ranking of 2580</b> in the prestigious <CustomLink text='Google Hash Code Competition 2022' url='' marginTop='' /></Text></li>
+            <li><Text>Our team secured the <b>second position</b> in the Mini Project Competition organized by our university, IIEST Shibpur. Our project, which utilized <b>Computer Vision to control Illumination of Electrical Appliances</b>, was a unique and innovative solution that impressed the judges and audience alike. It was a testament to the hard work and creativity of our team.</Text></li>
           </ul>
         </Box>
 
@@ -57,7 +66,7 @@ const AboutMe = () => {
         <Text marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
 
         <TableContainer marginTop={'2rem'} border={'1px solid black'} font>
-          <Table size={'md'} variant={'striped'} colorScheme='blackAlpha'>
+          <Table size={'md'} variant={'striped'} colorScheme={tableColorScheme}>
             <Thead>
               <Tr>
                 <Th>Semester</Th>
@@ -66,20 +75,24 @@ const AboutMe = () => {
             </Thead>
             <Tbody>
               <Tr>
-                <Td>1st</Td>
+                <Td><CustomLinkSGPA text='1st' url='' marginTop='' /></Td>
                 <Td>9.38</Td>
               </Tr>
               <Tr>
-                <Td>2nd</Td>
+                <Td><CustomLinkSGPA text='2nd' url='' marginTop='' /></Td>
                 <Td>8.46</Td>
               </Tr>
               <Tr>
-                <Td>3rd</Td>
+                <Td><CustomLinkSGPA text='3rd' url='' marginTop='' /></Td>
                 <Td>8.77</Td>
               </Tr>
               <Tr>
-                <Td>4th</Td>
+                <Td><CustomLinkSGPA text='4th' url='' marginTop='' /></Td>
                 <Td>7.54</Td>
+              </Tr>
+              <Tr>
+                <Td><CustomLinkSGPA text='5th' url='' marginTop='' /></Td>
+                <Td>6.43</Td>
               </Tr>
             </Tbody>
           </Table>
@@ -103,6 +116,7 @@ const AboutMe = () => {
       </Box>
     <Footer />
     </Box>
+    </>
   )
 }
 

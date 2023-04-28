@@ -3,6 +3,7 @@ import ProjectCard from '@/components/organisms/projectCard';
 import { Box, Text } from '@chakra-ui/react'
 import React from 'react'
 import Footer from './footer';
+import Navbar from '@/components/organisms/navbar';
 
 var projectObject = require('../data/project.json');
 
@@ -17,7 +18,9 @@ const descriptionArr = projectObject["description"];
 
 const Projects = () => {
   return (
-    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='3rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+    <>
+    <Navbar />
+    <Box fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
         <CustomHeading title={'Projects'} marginBottom={'3rem'} />
         
         {/* when adding new project add that at the end of every attribute in json file and here update at the top */}
@@ -34,6 +37,7 @@ const Projects = () => {
       <Footer />
        
     </Box>
+    </>
   )
 }
 

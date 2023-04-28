@@ -33,7 +33,7 @@ const Navbar = () => {
 
 
     return (
-        <Box className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem'>
+        <Box position={'fixed'} zIndex={'1'} className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem' backdropFilter='blur(10px)'>
             <Box display={'flex'} gap={'0.4rem'} justifyContent={'center'} alignItems={'center'}><Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link>
                 <ColorModeSwitcher />
             </Box>
