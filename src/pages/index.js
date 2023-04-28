@@ -7,6 +7,8 @@ import { Box, Text, border } from '@chakra-ui/react'
 import LinkedInLogo from '@/components/SVG/linkedin'
 import GithubLogo from '@/components/SVG/github'
 import TwitterLogo from '@/components/SVG/twitter'
+import { motion } from 'framer-motion'
+
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -36,7 +38,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Box paddingTop='3rem' display='flex' flexDirection='column' justifyContent='center' alignItems='center' marginLeft='auto' marginRight='auto' width={['75%', '75%', '65%']}>
+        <Box as={motion.div}
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: 300, opacity: 0 }}
+        transition={{
+          type: "ease-in-out",
+          stiffness: 260,
+          damping: 20,
+        }} paddingTop='3rem' display='flex' flexDirection='column' justifyContent='center' alignItems='center' marginLeft='auto' marginRight='auto' width={['75%', '75%', '65%']}>
           <Box borderRadius='50%' overflow='hidden'>  
             <MyImageOnLandingPage />
           </Box>
