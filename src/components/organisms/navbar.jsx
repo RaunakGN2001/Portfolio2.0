@@ -1,24 +1,25 @@
-import { Box, Button, List, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, List, ListItem, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useColorMode, useDisclosure } from '@chakra-ui/react'
 import React from 'react'
 import Hamburger from '../SVG/hamburger'
 import { useRouter } from 'next/router'
 
 import Link from 'next/link'
+import ColorModeSwitcher from './colorModeSwitcher'
 
 
 
 const ActiveLink = (href) => {
     const router = useRouter()
-    
 
-    if(router.asPath === href) return {
+
+    if (router.asPath === href) return {
         fontWeight: 'bold',
-        color:'#d81159'
+        color: '#d81159'
     }
-    else return {        
+    else return {
     }
 
-  
+
 }
 
 const Navbar = () => {
@@ -32,14 +33,16 @@ const Navbar = () => {
 
 
     return (
-        <Box className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem'>
-            <Box><Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link></Box>
+        <Box position={'fixed'} zIndex={'1'} className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem' backdropFilter='blur(10px)'>
+            <Box display={'flex'} gap={'0.4rem'} justifyContent={'center'} alignItems={'center'}><Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link>
+                <ColorModeSwitcher />
+            </Box>
             <Box display={{ sm: 'none', md: 'none', lg: 'flex' }}>
                 <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' fontWeight='medium'>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color:'#d81159', cursor: 'pointer' }}><Link href='/uses' style={ActiveLink('/uses')}>Uses</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/uses')}>Guestbook</Link></ListItem>
                 </List>
             </Box>
             <Box display={{ sm: 'flex', md: 'flex', lg: 'none' }}>

@@ -1,11 +1,19 @@
 import React from 'react'
-import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text } from '@chakra-ui/react'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text, useColorModeValue } from '@chakra-ui/react'
 import { ChevronRightIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
 
 const AccordionComponent = () => {
+
+  // const roleCardBG = useColorModeValue('#262c3d', '#a61f50');
+
+  const backgroundAccordion = useColorModeValue('#262c3d', '#a61f50')
+  const textColor = useColorModeValue('white', 'white')
+
+
+
   return (
-    <Accordion marginTop='1rem' minWidth='full' color='black' allowMultiple background='blackAlpha.300'>
+    <Accordion marginTop='1rem' minWidth='full' color={textColor} allowMultiple background={backgroundAccordion}>
         <AccordionItem>
           <h2>
             <AccordionButton>
