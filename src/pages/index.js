@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/organisms/navbar'
-import { Box, Text, border } from '@chakra-ui/react'
+import { Box, Link, Text, border } from '@chakra-ui/react'
 import LinkedInLogo from '@/components/SVG/linkedin'
 import GithubLogo from '@/components/SVG/github'
 import TwitterLogo from '@/components/SVG/twitter'
@@ -57,9 +57,9 @@ export default function Home() {
           <Text fontSize={["12px", "15px", "17px"]} color='gray.400'>· Tech Enthusiast · Student Developer
           </Text>
           <Box display='flex' gap='1.5rem' marginTop='2rem'> 
-            <LinkedInLogo classname = 'socialsLogo' />
-            <GithubLogo classname = 'socialsLogo' />
-            <TwitterLogo classname = 'socialsLogo' />
+            <Link href='https://www.linkedin.com/in/raunakgn/' target='_blank'><LinkedInLogo classname = 'socialsLogo' /></Link>
+            <Link href='https://github.com/RaunakGN2001' target='_blank'><GithubLogo classname = 'socialsLogo' /></Link>
+            <Link href='https://twitter.com/rnk_gn' target='_blank'><TwitterLogo classname = 'socialsLogo' /></Link>
           </Box>
         </Box>
       </main>

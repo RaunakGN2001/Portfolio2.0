@@ -11,6 +11,7 @@ import { motion } from 'framer-motion'
 var experienceObject = require('../data/experience.json');
 
 const nameArr = experienceObject["name"];
+const companyURLArr = experienceObject["companyURL"];
 const periodArr = experienceObject["period"];
 const roleArr = experienceObject["role"];
 const imageURLArr = experienceObject["imageURL"];
@@ -33,9 +34,9 @@ const Experiences = () => {
     }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
       <CustomHeading title={'Experiences'} marginBottom={'3rem'} />
 
-      <ExperienceCard name={nameArr[1]} period={periodArr[1]} role={roleArr[1]} imageURL={imageURLArr[1]} proofOfWork={proofOfWorkArr[1]} responsibilities={responsibilitiesArr[1]} lastCard={false} />
+      <ExperienceCard name={nameArr[1]} companyURL={companyURLArr[1]} period={periodArr[1]} role={roleArr[1]} imageURL={imageURLArr[1]} proofOfWork={proofOfWorkArr[1]} responsibilities={responsibilitiesArr[1]} lastCard={false} />
 
-      <ExperienceCard name={nameArr[0]} period={periodArr[0]} role={roleArr[0]} imageURL={imageURLArr[0]} proofOfWork={proofOfWorkArr[0]} responsibilities={responsibilitiesArr[0]} lastCard={true} />
+      <ExperienceCard name={nameArr[0]} companyURL={companyURLArr[0]} period={periodArr[0]} role={roleArr[0]} imageURL={imageURLArr[0]} proofOfWork={proofOfWorkArr[0]} responsibilities={responsibilitiesArr[0]} lastCard={true} />
 
     <Footer />
     </Box>

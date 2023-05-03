@@ -4,7 +4,7 @@ import React from 'react'
 
 const CustomLink = ( {text, url, marginTop} ) => {
   return (
-    <Link fontSize={'18px'} textDecoration={'underline'} fontWeight={'extrabold'} href={url} _hover={{ color: '#eb2d72', textDecoration: 'underline' }} marginTop={marginTop}>{text} <ExternalLinkIcon mx='2px' /></Link>
+    <Link fontSize={'18px'} textDecoration={'underline'} fontWeight={'extrabold'} href={url} target='_blank' _hover={{ color: '#eb2d72', textDecoration: 'underline' }} marginTop={marginTop}>{text} <ExternalLinkIcon mx='2px' /></Link>
   )
 }
 
