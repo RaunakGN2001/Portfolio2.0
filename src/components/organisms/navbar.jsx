@@ -33,11 +33,12 @@ const Navbar = () => {
 
 
     return (
-        <Box position={'fixed'} zIndex={'1'} className='Navbar' width='100%' display='flex' justifyContent='space-between' alignItems='center' paddingLeft='7rem' paddingRight='7rem' paddingTop='1rem' paddingBottom='1rem' backdropFilter='blur(10px)'>
-            <Box display={'flex'} gap={'0.4rem'} justifyContent={'center'} alignItems={'center'}><Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link>
+        <Box position={'fixed'} zIndex={'1'} className='Navbar' width='100%' display='flex' justifyContent='space-around' alignItems='center' paddingLeft={{base:'2rem', lg:'7rem'}} paddingRight={{base:'2rem', lg:'7rem'}} paddingTop='1rem' paddingBottom='1rem' backdropFilter='blur(10px)' >
+            <Box display={'flex'} justifyContent={'center'} alignItems={'center'}>
+                <Link href="/"><Text fontSize={["15px", "20px", "23x"]} fontWeight='bold'>Raunak Gayen</Text></Link>
                 <ColorModeSwitcher />
             </Box>
-            <Box display={{ sm: 'none', md: 'none', lg: 'flex' }}>
+            <Box display={{ base:'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
                 <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' fontWeight='medium'>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
@@ -45,7 +46,7 @@ const Navbar = () => {
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/uses')}>Guestbook</Link></ListItem>
                 </List>
             </Box>
-            <Box display={{ sm: 'flex', md: 'flex', lg: 'none' }}>
+            <Box display={{ base: 'flex', sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}>
                 <Hamburger classname='socialsLogo' onClickHandler={onClickHandler} />
             </Box>
 
