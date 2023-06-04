@@ -24,7 +24,7 @@ const Guestbook = () => {
       type: 'ease-in-out',
       stiffness: 260,
       damping: 20,
-    }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column'>
+    }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{base:'1.5rem', sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column'>
             <CustomHeading title={'Contact Me'} marginBottom={'1.5rem'} />
 
             <Text fontSize={["15px", "17px", "20px"]} marginBottom={'1.5rem'}>I'm thrilled 😄 that you're interested in connecting with me. If you have any questions, comments, or just want to say hello, please don't hesitate to reach out. </Text>

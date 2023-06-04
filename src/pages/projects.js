@@ -29,7 +29,7 @@ const Projects = () => {
       type: "ease-in-out",
       stiffness: 260,
       damping: 20,
-    }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+    }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ base:'1.5rem', sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
         <CustomHeading title={'Projects'} marginBottom={'3rem'} />
         
         {/* when adding new project add that at the end of every attribute in json file and here update at the top */}

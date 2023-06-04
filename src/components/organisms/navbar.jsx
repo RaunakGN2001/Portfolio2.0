@@ -5,11 +5,15 @@ import { useRouter } from 'next/router'
 
 import Link from 'next/link'
 import ColorModeSwitcher from './colorModeSwitcher'
+import HamburgerDark from '../SVG/hamburger-dark'
+import { color } from 'framer-motion'
 
 
 
 const ActiveLink = (href) => {
     const router = useRouter()
+
+    console.log(router.asPath, href);
 
 
     if (router.asPath === href) return {
@@ -25,6 +29,9 @@ const ActiveLink = (href) => {
 const Navbar = () => {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
+
+    const { colorMode, toggleColorMode } = useColorMode();
+
     const onClickHandler = () => {
         onOpen();
     }
@@ -43,11 +50,11 @@ const Navbar = () => {
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/uses')}>Guestbook</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/guestbook')}>Guestbook</Link></ListItem>
                 </List>
             </Box>
             <Box display={{ base: 'flex', sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}>
-                <Hamburger classname='socialsLogo' onClickHandler={onClickHandler} />
+                {colorMode === "light" ? <Hamburger classname='socialsLogo' onClickHandler={onClickHandler} /> : <HamburgerDark classname='socialsLogo' onClickHandler={onClickHandler} /> }
             </Box>
 
             <Modal onClose={onClose} isCentered size='full' isOpen={isOpen}>
@@ -55,13 +62,13 @@ const Navbar = () => {
                     backdropFilter='blur(20px)'
                 />
                 <ModalContent bg='none'>
-                    <ModalCloseButton color='white' />
+                    <ModalCloseButton color='white' _hover={{ color:'#eb2d72' }}/>
                     <ModalBody display='flex' justifyContent='center' alignItems='center' textColor='white'>
                         <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' flexDirection='column' justifyContent='center' alignItems='center' fontWeight='bold'>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', transform: 'scale(1.05)' }}><Link href="/about">About Me</Link></ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', transform: 'scale(1.05)' }}>Experiences</ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', transform: 'scale(1.05)' }}>Projects</ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', transform: 'scale(1.05)' }}>Uses</ListItem>
+                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/about">About Me</Link></ListItem>
+                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/experiences">Experiences</Link></ListItem>
+                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/projects">Projects</Link></ListItem>
+                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/guestbook">Guestbook</Link></ListItem>
                         </List>
                     </ModalBody>
                 </ModalContent>

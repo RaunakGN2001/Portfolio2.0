@@ -1,37 +1,45 @@
 .main {
   display: flex;
   flex-direction: column;
-  max-height: 100vh;
-  padding-top: 7rem;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh;
+  background-image: url('../../public/images/dddepth-159.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* padding-top: 7rem; */
 }
 
 
-.center {
+
+
+
+/* .center {
   display: flex;
   justify-content: center;
   align-items: center;
   position: absolute;
-  /* padding: 4rem 0; */
-}
+  height: 4000px;
+  z-index: -1;
+} */
 
-.center::before {
+/* .center::before {
   background: var(--secondary-glow);
   border-radius: 50%;
   width: 100vw;
-  height: 100vh;
+  max-height: 500vh;
   z-index: -1;
 
-}
+} */
 
-.center::after {
+/* .center::after {
   background: var(--primary-glow);
   width:100vw;
   height: 60vh;
 
-  /* justify-content: center; */
   top: 20px;
   z-index: -2;
-}
+} */
 
 .center::before,
 .center::after {
@@ -61,17 +69,11 @@
 }
 
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 500px) {
   .content {
     padding: 4rem;
   }
 
-  .grid {
-    grid-template-columns: 1fr;
-    margin-bottom: 120px;
-    max-width: 320px;
-    text-align: center;
-  }
 
   .card {
     padding: 1rem 2.5rem;
@@ -80,16 +82,18 @@
   .card h2 {
     margin-bottom: 0.5rem;
   }
-
+/* 
   .center {
     padding: 8rem 0 6rem;
+
   }
 
   .center::before {
     transform: none;
     height: 300px;
-  }
+  } */
 
+  
   .description {
     font-size: 0.8rem;
   }
