@@ -61,7 +61,7 @@ export default function Home() {
           </Box>
           <Text fontWeight='bold' marginTop='2rem' fontSize={["15px", "20px", "25px"]}>Hey there 👋 This is Raunak </Text>
           <Text fontSize={["12px", "15px", "17px"]} color={textColor} align='center' marginTop='1rem'>
-            Upcoming Summer Intern @ PwC · TA @ Coding Ninjas · EE @ IIEST Shibpur
+            Technology Consulting Intern @ PwC · TA @ Coding Ninjas · EE @ IIEST Shibpur
           </Text>
           <Text fontSize={["12px", "15px", "17px"]} color={textColor}>· Tech Enthusiast · Student Developer
           </Text>
