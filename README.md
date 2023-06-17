@@ -1,3 +1,6 @@
+![PortfolioBanner](https://github.com/RaunakGN2001/Portfolio2.0/blob/727b1d9244d888ba0c6c0fbeba56ce770aeaeefa/public/images/PortfolioBanner.png)
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
