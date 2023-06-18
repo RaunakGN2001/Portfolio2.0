@@ -30,6 +30,17 @@ Welcome to Portfolio 2.0, a sleek, powerful and a completelely revamped Portfoli
 - <b>Dark Mode: </b> This also features an eye-catchy Dark Mode, allowing users to switch between light and dark modes for optimal readability and comfort using the Color-Mode Toggler.
 
 ## 📷 Snapshots
+### Here's the walkthrough 👇🏻
+<img src="https://github.com/RaunakGN2001/Portfolio2.0/blob/642d4cf64e134897ecf58afe91c3cfbd9d644d9f/public/images/portfolio.gif" width="100%" />
+
+### Light 🌞 and Dark 🌚 Mode 
+![Light-and-dark-theme](https://github.com/RaunakGN2001/Portfolio2.0/blob/642d4cf64e134897ecf58afe91c3cfbd9d644d9f/public/images/dualTone.png)
+
+### About in the dark
+![About](https://github.com/RaunakGN2001/Portfolio2.0/blob/642d4cf64e134897ecf58afe91c3cfbd9d644d9f/public/images/snap1.png)
+
+### Experience under the lights
+![Experience](https://github.com/RaunakGN2001/Portfolio2.0/blob/642d4cf64e134897ecf58afe91c3cfbd9d644d9f/public/images/snap2.png)
 
 
 ## 🚀 Installation
