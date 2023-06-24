@@ -5,6 +5,7 @@ import Footer from './footer';
 import CustomHeading from '@/components/organisms/customHeading';
 import Navbar from '@/components/organisms/navbar';
 import { motion } from 'framer-motion'
+import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu';
 
 
 
@@ -22,6 +23,7 @@ const Experiences = () => {
 
   return (
     <>
+    <KeyboardShortcutsMenu />
     <Navbar />
     <Box as={motion.div} 
       initial={{ x: 300, opacity: 0 }}

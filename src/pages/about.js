@@ -21,6 +21,7 @@ import CustomHeading from '@/components/organisms/customHeading'
 import CustomLink from '@/components/organisms/customLink'
 import CustomLinkSGPA from '@/components/organisms/customLinkSGPA'
 import Navbar from '@/components/organisms/navbar'
+import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu'
 
 
 const AboutMe = () => {
@@ -29,6 +30,7 @@ const AboutMe = () => {
 
   return (
     <>
+      <KeyboardShortcutsMenu />
       <Navbar />
       <Box as={motion.div}
         initial={{ x: 300, opacity: 0 }}

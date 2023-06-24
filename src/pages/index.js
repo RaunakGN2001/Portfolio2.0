@@ -9,6 +9,8 @@ import GithubLogo from '@/components/SVG/github'
 import TwitterLogo from '@/components/SVG/twitter'
 import { motion } from 'framer-motion'
 import useKeyboardShortcuts from '@/utils/KeyboardShortcuts'
+import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -36,6 +38,7 @@ export default function Home() {
 
   return (
     <>
+      <KeyboardShortcutsMenu />
       <Navbar />
       <Head>
         <title>RaunakGn | Portfolio</title>
