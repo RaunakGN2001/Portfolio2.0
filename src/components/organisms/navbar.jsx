@@ -7,6 +7,7 @@ import Link from 'next/link'
 import ColorModeSwitcher from './colorModeSwitcher'
 import HamburgerDark from '../SVG/hamburger-dark'
 import { color } from 'framer-motion'
+import useKeyboardShortcuts from '@/utils/KeyboardShortcuts'
 
 
 
@@ -36,6 +37,7 @@ const Navbar = () => {
         onOpen();
     }
 
+    useKeyboardShortcuts();
 
 
 

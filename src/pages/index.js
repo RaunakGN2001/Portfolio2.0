@@ -8,6 +8,7 @@ import LinkedInLogo from '@/components/SVG/linkedin'
 import GithubLogo from '@/components/SVG/github'
 import TwitterLogo from '@/components/SVG/twitter'
 import { motion } from 'framer-motion'
+import useKeyboardShortcuts from '@/utils/KeyboardShortcuts'
 
 
 const inter = Inter({ subsets: ['latin'] })
