@@ -52,6 +52,7 @@ const Navbar = () => {
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
+                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/stats')}><Link href='/stats'>Stats</Link></ListItem>
                     <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/guestbook')}>Guestbook</Link></ListItem>
                 </List>
             </Box>
@@ -70,6 +71,7 @@ const Navbar = () => {
                             <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/about">About Me</Link></ListItem>
                             <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/experiences">Experiences</Link></ListItem>
                             <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/projects">Projects</Link></ListItem>
+                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/stats">Stats</Link></ListItem>
                             <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/guestbook">Guestbook</Link></ListItem>
                         </List>
                     </ModalBody>

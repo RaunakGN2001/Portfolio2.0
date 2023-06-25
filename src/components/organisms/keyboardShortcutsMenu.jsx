@@ -18,14 +18,12 @@ const KeyboardShortcutsMenu = () => {
         function handleKeyDown(event) {
             if (event.key === 'Meta') {
                 setIsCommandPressed(prevState => !prevState);
-                console.log('Meta pressed');
             }
         }
 
         function handleKeyUp(event) {
             if (event.key === 'Meta') {
                 setIsCommandPressed(prevState => !prevState);
-                console.log('Meta released');
             }
         }
 

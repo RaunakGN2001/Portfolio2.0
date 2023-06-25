@@ -16,7 +16,7 @@ const Footer = () => {
             <Link href='https://github.com/RaunakGN2001' target='_blank'><GithubLogo classname = 'socialsLogo' /></Link>
             <Link href='https://twitter.com/rnk_gn' target='_blank'><TwitterLogo classname = 'socialsLogo' /></Link>
           </Box>
-          <Text marginBottom={'1rem'} marginTop={'1rem'} color={'gray.400'} paddingTop={'1rem'} fontSize={'14px'}>Made with ❤️ by <a href={'https://github.com/RaunakGN2001'}>RaunakGN2001 ↗ </a> </Text>
+          <Text marginBottom={'1rem'} marginTop={'1rem'} color={'gray.400'} paddingTop={'1rem'} fontSize={'14px'}>Powered by <Text fontWeight={'bold'} display={'inline-block'} color={'gray.700'}>Next.js</Text> and <Text fontWeight={'bold'} color={'gray.700'} display={'inline-block'}>Vercel</Text></Text>
         </Box>
     </Box>
   )
