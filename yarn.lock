@@ -2881,6 +2881,11 @@ react-activity-calendar@^2.0.0:
     chroma-js "^2.4.0"
     date-fns "^2.30.0"
 
+react-blob@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-blob/-/react-blob-2.1.0.tgz#c8882f96793926d6f771d0e7d09cea75da2f3c74"
+  integrity sha512-U2WxqDLL4BYeg+cbW8oC6ne42qVuHDkNmUJiIctAZoa+dpY4fD9ZYkyIWST34NuZDEGllZnCy8W8H5iknu4C/g==
+
 react-clientside-effect@^1.2.6:
   version "1.2.6"
   resolved "https://registry.npmjs.org/react-clientside-effect/-/react-clientside-effect-1.2.6.tgz"

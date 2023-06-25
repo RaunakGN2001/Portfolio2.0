@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Barlow } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/organisms/navbar'
 import { Box, Link, Text, border, useColorModeValue } from '@chakra-ui/react'
@@ -13,7 +13,9 @@ import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 
 
-const inter = Inter({ subsets: ['latin'] })
+const barlow = Barlow({ 
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  subsets: ['latin'] })
 
 
 const MyImageOnLandingPage = (props) => {
