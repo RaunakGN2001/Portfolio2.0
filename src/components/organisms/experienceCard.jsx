@@ -16,7 +16,7 @@ const ExperienceCard = ({ name, companyURL, period, role, imageURL, proofOfWork,
             whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true }}
             borderBottom={borderBottomColor} display={'flex'} flexDirection={['column', 'column', 'row']} width='100%' gap={'3rem'} marginBottom={'3rem'} paddingBottom={'3rem'}>
             <Box display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'} gap={'1rem'}>
-                <img src={imageURL} width={'400px'} loading='lazy' />
+                <Image src={imageURL} width={'400'} height={'400'} placeholder='blur' blurDataURL={imageURL}/>
                 <Text color={textColor} textDecoration={'underline'} fontWeight={'bold'} fontSize={["15px", "17px", "20px"]}><Link _hover={{color: '#eb2d72', textDecoration: 'underline'}} href={companyURL} target='_blank'>{name}</Link></Text>
             </Box>
             <Box>
