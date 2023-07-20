@@ -43,7 +43,7 @@ const GithubStatsGridData = () => {
     }, []);
 
 
-    console.log(githubData);
+    // console.log(githubData);
 
     return (
         <GithubStatsGrid data={githubData} />
