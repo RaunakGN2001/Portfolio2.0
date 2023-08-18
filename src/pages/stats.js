@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Box, Grid, GridItem, Text, useColorModeValue } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Text, useColorModeValue, Skeleton, SkeletonCircle, SkeletonText, Spinner, Divider } from '@chakra-ui/react'
 import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu'
 import Navbar from '@/components/organisms/navbar'
 import { motion } from 'framer-motion'
@@ -8,20 +8,25 @@ import GridItemModified from '@/components/organisms/gridItemModified'
 import GithubStatsGrid from '@/components/organisms/githubStatsGrid'
 import GitHubCalendar from 'react-github-calendar';
 import Footer from './footer'
+import Link from 'next/link'
+import { ExternalLinkIcon } from '@chakra-ui/icons'
 
 const GithubStatsGridData = () => {
 
 
     const [githubData, setgithubData] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
 
 
     useEffect(() => {
         const fetchGithubData = async () => {
+
             try {
+                setIsLoading(true);
                 const response = await fetch('/api/githubInfo');
                 const data = await response.json();
-                
+
 
                 const { public_repos, followers, following, public_gists } = data;
 
@@ -36,6 +41,9 @@ const GithubStatsGridData = () => {
             } catch (error) {
                 console.error('Error: ', error);
             }
+            finally {
+                setIsLoading(false);
+            }
 
         };
 
@@ -43,11 +51,22 @@ const GithubStatsGridData = () => {
     }, []);
 
 
-    // console.log(githubData);
+    console.log(githubData);
 
-    return (
+    return isLoading === true ? (
+        <Box display='flex' justifyContent='center' marginTop='1.5rem'>
+            <Spinner
+                thickness='4px'
+                speed='0.65s'
+                emptyColor='gray.200'
+                color='#eb2d72'
+                size='xl'
+            />
+        </Box>
+    ) : (
         <GithubStatsGrid data={githubData} />
     )
+
 }
 
 
@@ -56,6 +75,17 @@ const Stats = () => {
     const githubContributionColorScheme = useColorModeValue('light', 'dark');
     // this is for adjusting the color mode of github contribution chart as I switch light and dark mode
 
+
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
+    // to remove hydration error
+    if (!isMounted) {
+        return null;
+    }
 
     return (
         <>
@@ -75,18 +105,18 @@ const Stats = () => {
                 <Box width='full' as={motion.div} initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }} >
                     <Text fontWeight='medium'>As a Developer, having a strong presence on GitHub is essential for establishing credibility, showcasing skills, and fostering collaboration. GitHub serves as a central hub for version control, enabling seamless collaboration on projects and providing a platform to highlight contributions and coding expertise.</Text>
-                    <Text marginTop={'2rem'} fontWeight='medium'>These are my personal statistics about my Github Profile.</Text>
+                    <Text marginTop={'2rem'} fontWeight='medium'>These are my personal statistics about my <Text as='span' textDecoration='underline'><Link href='https://github.com/RaunakGN2001/' target='_blank'>Github Profile<ExternalLinkIcon mx='2px' /></Link></Text>.</Text>
 
-                    
+
                     <GithubStatsGridData /> {/* This component displays all my GitHub Stats in Grid format */}
 
                     <Box marginTop={'3rem'}>
                         <Text fontSize={["13px", "20px", "27px"]} fontWeight='bold' marginBottom={'1rem'}>GitHub Contributions ⭐️</Text>
                         <GitHubCalendar username='RaunakGN2001' colorScheme={githubContributionColorScheme} />
                     </Box>
-                    
+
                     <Footer />
-                    
+
                 </Box>
             </Box>
 

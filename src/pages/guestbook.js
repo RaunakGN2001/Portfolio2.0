@@ -42,7 +42,7 @@ const Guestbook = () => {
 
         <Text marginBottom={'1.5rem'} fontSize={["15px", "17px", "20px"]}>Additionally, if you prefer to send an email, you can reach me at <Link _hover={{ color: '#d81159', textDecoration: 'underline' }} fontWeight={'bold'} href='mailto:raunakgn.careers@gmail.com'>raunakgn.careers@gmail.com<ExternalLinkIcon mx='2px' /></Link>. I'll do my best to respond as quickly as possible.</Text>
 
-        <Text fontSize={["15px", "17px", "20px"]}>Thank you 🙏🏼 for taking the time to visit my portfolio, and I'm looking forward to hearing from you!" ✨ </Text>
+        <Text fontSize={["15px", "17px", "20px"]}>Thank you 🙏🏼 for taking the time to visit my portfolio, and I'm looking forward to hearing from you! ✨ </Text>
       </Box>
     </>
   )

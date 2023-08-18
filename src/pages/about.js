@@ -1,5 +1,6 @@
 import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Box, Card, List, ListIcon, ListItem, Text, UnorderedList, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import {
   Table,
@@ -26,6 +27,17 @@ import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu'
 
 const AboutMe = () => {
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // to remove hydration error
+  if (!isMounted) {
+    return null;
+  }
+
   const tableColorScheme = useColorModeValue('blackAlpha', 'whiteAlpha');
 
   return (
@@ -40,7 +52,7 @@ const AboutMe = () => {
           type: "ease-in-out",
           stiffness: 260,
           damping: 20,
-        }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ base:'1.5rem', sm: '3rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
+        }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ base: '1.5rem', sm: '3rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
 
 
         <CustomHeading title={'About'} marginBottom={'1rem'} />
@@ -48,7 +60,7 @@ const AboutMe = () => {
 
 
         <Box width='full' marginTop='2rem' as={motion.div} initial={{ opacity: 0 }}
-            whileInView={{opacity: 1 }} >
+          whileInView={{ opacity: 1 }} >
           <Text fontWeight='medium'>Greetings and a warm welcome to you, dear visitor 👀 ! It's an absolute delight to e-meet you ✨ .</Text>
           <Text fontWeight='medium' marginTop='1rem'>Allow me to introduce myself: I am Raunak, a preFinal Year Student and an ambitious and enthusiastic Full-Stack Developer who is currently pursuing a Bachelor's Degree in <b>Electrical Engineering</b> from the esteemed <b>Indian Institute of Engineering Science and Technology, Shibpur.</b></Text>
           <Text fontWeight='medium' marginTop='1rem'>As an undergraduate student, I possess a profound passion for expanding my horizons and experimenting with novel ideas as I journey forward. Join me as we embark on an exciting voyage of discovery and innovation.</Text>
@@ -75,13 +87,13 @@ const AboutMe = () => {
           </Box>
 
 
-          <Text as={motion.div}  initial={{opacity: 0 }}
-            whileInView={{opacity: 1 }} marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Academics'>Academics</Text>
-          <Text as={motion.div} initial={{opacity: 0 }}
-            whileInView={{opacity: 1 }} marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
+          <Text as={motion.div} initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }} marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Academics'>Academics</Text>
+          <Text as={motion.div} initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }} marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
 
-          <TableContainer as={motion.div} initial={{opacity: 0 }}
-            whileInView={{opacity: 1 }} marginTop={'2rem'} border={'1px solid black'} font>
+          <TableContainer as={motion.div} initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }} marginTop={'2rem'} border={'1px solid black'} font>
             <Table size={'md'} variant={'striped'} colorScheme={tableColorScheme}>
               <Thead>
                 <Tr>

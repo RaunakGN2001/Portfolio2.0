@@ -6,6 +6,7 @@ import Footer from './footer';
 import Navbar from '@/components/organisms/navbar';
 import { motion } from 'framer-motion'
 import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu';
+import { useState, useEffect } from 'react';
 
 var projectObject = require('../data/project.json');
 
@@ -19,6 +20,18 @@ const descriptionArr = projectObject["description"];
 
 
 const Projects = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // to remove hydration error
+  if(!isMounted) {
+    return null;
+  }
+
+
   return (
     <>
       <KeyboardShortcutsMenu />

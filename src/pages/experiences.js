@@ -6,10 +6,22 @@ import CustomHeading from '@/components/organisms/customHeading';
 import Navbar from '@/components/organisms/navbar';
 import { motion } from 'framer-motion'
 import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu';
+import { useEffect, useState } from 'react';
 
 const { experienceArr } = require('../data/experience');
 
 const Experiences = () => {
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  // to remove hydration error
+  if(!isMounted) {
+    return null;
+  }
 
   return (
     <>
@@ -27,7 +39,9 @@ const Experiences = () => {
         <CustomHeading title={'Experiences'} marginBottom={'3rem'} />
         <Box>
           {experienceArr.map(data => (
-            <ExperienceCard name={data.name} companyURL={data.companyURL} period={data.period} role={data.role} imageURL={data.imageURL} proofOfWork={data.proofOfWork} responsibilities={data.responsibilities} lastCard={false} />
+            <Box key={data.name}>
+              <ExperienceCard name={data.name} companyURL={data.companyURL} period={data.period} role={data.role} imageURL={data.imageURL} proofOfWork={data.proofOfWork} responsibilities={data.responsibilities} lastCard={false} />
+            </Box>
           ))}
         </Box>
         <Footer />
