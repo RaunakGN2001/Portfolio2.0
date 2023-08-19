@@ -34,7 +34,7 @@ const MyImageOnLandingPage = (props) => {
 
 export default function Home() {
 
-  const backgroundImage = useColorModeValue('./images/dddepth-light.jpg', './images/dddepth-dark.jpg');
+  const backgroundImage = useColorModeValue('./images/dddepth-light.webp', './images/dddepth-dark.webp');
 
   const textColor = useColorModeValue('blackAlpha.600', 'whiteAlpha.600');
 

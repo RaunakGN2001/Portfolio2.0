@@ -34,10 +34,10 @@ const Guestbook = () => {
         <Text fontSize={["15px", "17px", "20px"]}>You can find my socials below: </Text>
 
         <Box display='flex' justifyContent={'center'} gap='2rem' marginTop='2rem' marginBottom={'2.5rem'}>
-          <LinkedInLogoLarge classname='socialsLogoInContactPage' />
-          <GithubLogoLarge classname='socialsLogoInContactPage' />
-          <TwitterLogoLarge classname='socialsLogoInContactPage' />
-          <InstagramLogoLarge classname='socialsLogoInContactPage' />
+          <Link href='https://www.linkedin.com/in/raunakgn/' target='_blank'><LinkedInLogoLarge classname='socialsLogoInContactPage' /></Link>
+          <Link href='https://github.com/RaunakGN2001' target='_blank'><GithubLogoLarge classname='socialsLogoInContactPage' /></Link>
+          <Link href='https://twitter.com/rnk_gn' target='_blank'><TwitterLogoLarge classname='socialsLogoInContactPage' /></Link>
+          <Link href='https://www.instagram.com/captured_on_ifone/' target='_blank'><InstagramLogoLarge classname='socialsLogoInContactPage' /></Link>
         </Box>
 
         <Text marginBottom={'1.5rem'} fontSize={["15px", "17px", "20px"]}>Additionally, if you prefer to send an email, you can reach me at <Link _hover={{ color: '#d81159', textDecoration: 'underline' }} fontWeight={'bold'} href='mailto:raunakgn.careers@gmail.com'>raunakgn.careers@gmail.com<ExternalLinkIcon mx='2px' /></Link>. I'll do my best to respond as quickly as possible.</Text>

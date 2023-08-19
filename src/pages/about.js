@@ -62,7 +62,7 @@ const AboutMe = () => {
         <Box width='full' marginTop='2rem' as={motion.div} initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }} >
           <Text fontWeight='medium'>Greetings and a warm welcome to you, dear visitor 👀 ! It's an absolute delight to e-meet you ✨ .</Text>
-          <Text fontWeight='medium' marginTop='1rem'>Allow me to introduce myself: I am Raunak, a preFinal Year Student and an ambitious and enthusiastic Full-Stack Developer who is currently pursuing a Bachelor's Degree in <b>Electrical Engineering</b> from the esteemed <b>Indian Institute of Engineering Science and Technology, Shibpur.</b></Text>
+          <Text fontWeight='medium' marginTop='1rem'>Allow me to introduce myself: I am Raunak, a Final Year Student and an ambitious and enthusiastic Full-Stack Developer who is currently pursuing a Bachelor's Degree in <b>Electrical Engineering</b> from the esteemed <b>Indian Institute of Engineering Science and Technology, Shibpur.</b></Text>
           <Text fontWeight='medium' marginTop='1rem'>As an undergraduate student, I possess a profound passion for expanding my horizons and experimenting with novel ideas as I journey forward. Join me as we embark on an exciting voyage of discovery and innovation.</Text>
 
 

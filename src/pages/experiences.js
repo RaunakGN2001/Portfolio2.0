@@ -7,8 +7,8 @@ import Navbar from '@/components/organisms/navbar';
 import { motion } from 'framer-motion'
 import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu';
 import { useEffect, useState } from 'react';
+import { experienceArr } from '@/data';
 
-const { experienceArr } = require('../data/experience');
 
 const Experiences = () => {
 

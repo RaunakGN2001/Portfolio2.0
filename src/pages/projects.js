@@ -7,16 +7,8 @@ import Navbar from '@/components/organisms/navbar';
 import { motion } from 'framer-motion'
 import KeyboardShortcutsMenu from '@/components/organisms/keyboardShortcutsMenu';
 import { useState, useEffect } from 'react';
+import { projectArr } from '@/data';
 
-var projectObject = require('../data/project.json');
-
-// console.log(projectObject);
-
-const nameArr = projectObject["name"];
-const techStackArr = projectObject["techStack"];
-const imageURLArr = projectObject["imageURL"];
-const githubLinkArr = projectObject["githubLink"];
-const descriptionArr = projectObject["description"];
 
 
 const Projects = () => {
@@ -47,16 +39,11 @@ const Projects = () => {
         }} fontWeight='medium' className='About-container' minHeight='90vh' paddingInline={{ base: '1.5rem', sm: '5rem', md: '10rem', lg: '15rem' }} paddingTop='7rem' display='flex' flexDirection='column' alignItems={{ md: 'center', sm: 'center', lg: '' }}>
         <CustomHeading title={'Projects'} marginBottom={'3rem'} />
 
-        {/* when adding new project add that at the end of every attribute in json file and here update at the top */}
-
-
-        <ProjectCard name={nameArr[1]} techStack={techStackArr[1]} imageURL={imageURLArr[1]} githubLink={githubLinkArr[1]} description={descriptionArr[1]} />
-
-        <ProjectCard name={nameArr[0]} techStack={techStackArr[0]} imageURL={imageURLArr[0]} githubLink={githubLinkArr[0]} description={descriptionArr[0]} />
-
-        <ProjectCard name={nameArr[2]} techStack={techStackArr[2]} imageURL={imageURLArr[2]} githubLink={githubLinkArr[2]} description={descriptionArr[2]} />
-
-
+        {projectArr.map((project) => (
+          <Box key={project.name}>
+            <ProjectCard name={project.name} techStack={project.techStack} imageURL={project.imageURL} githubLink={project.githubLink} description={project.description} />
+          </Box>
+        ))}
 
         <Footer />
 

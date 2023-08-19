@@ -12,7 +12,7 @@ const Footer = () => {
         <Box borderTop='3px solid #efefef' display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}
         >
           <Box display='flex' justifyContent={'center'}  gap='1.5rem' marginTop='2rem'> 
-          <Link href='https://www.linkedin.com/in/raunakgn/' target='_blank'><LinkedInLogo classname = 'socialsLogo' /></Link>
+            <Link href='https://www.linkedin.com/in/raunakgn/' target='_blank'><LinkedInLogo classname = 'socialsLogo' /></Link>
             <Link href='https://github.com/RaunakGN2001' target='_blank'><GithubLogo classname = 'socialsLogo' /></Link>
             <Link href='https://twitter.com/rnk_gn' target='_blank'><TwitterLogo classname = 'socialsLogo' /></Link>
           </Box>
