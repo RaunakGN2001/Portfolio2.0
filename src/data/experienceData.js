@@ -1,5 +1,14 @@
 const experienceArr = [
     {
+        name: "PwC",
+        companyURL: "https://www.pwc.in/",
+        period: "May 2023 - Jul 2023",
+        role: "Technology Consulting Intern",
+        imageURL: "/images/PWC_logo.png",
+        proofOfWork: "https://drive.google.com/file/d/15Q_uG-rqWAEkGTcANoP5LQrfXugb70e6/view",
+        responsibilities: ["As an integral part of PwC Global Cyber Security Operations Team, I contributed to the development of SecOps Portal, a full-stack application designed for the daily operational monitoring of internal security tools.","Implemented a modern and responsive user interface with React.js and Chakra UI, while engineering the backend using Node.js and Express.js to ensure seamless functionality. Leveraged Microsoft SQL Server for efficient data storage and retrieval, enhancing the overall performance of the Portal.","Collaborated with a skilled team to develop the application, which not only provided valuable hands-on experience in full-stack development but also streamlined the team’s workflow by replacing the outdated practice of logging security data in Google Sheets. Successfully delivered the project within the stipulated time that contributed to the company’s cybersecurity initiatives."],
+    },  
+    {
         name: "Coding Ninjas",
         companyURL: "https://www.codingninjas.com",
         period: "Feb 2022 - Jun 2022",

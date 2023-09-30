@@ -90,7 +90,7 @@ const AboutMe = () => {
           <Text as={motion.div} initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }} marginTop='3rem' fontSize={["17px", "24px", "35px"]} fontWeight='bold' borderBottom='1px solid black' width='full' id='Academics'>Academics</Text>
           <Text as={motion.div} initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }} marginTop='1rem'><b>CGPA:</b>  8.11 / 10 <Text display={'inline-block'} color='gray.500'>( till 5th Sem )</Text></Text>
+            whileInView={{ opacity: 1 }} marginTop='1rem'><b>CGPA:</b>  7.88 / 10 <Text display={'inline-block'} color='gray.500'>( till 6th Sem )</Text></Text>
 
           <TableContainer as={motion.div} initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }} marginTop={'2rem'} border={'1px solid black'} font>
@@ -122,6 +122,10 @@ const AboutMe = () => {
                   <Td><CustomLinkSGPA text='5th' url='' marginTop='' /></Td>
                   <Td>6.43</Td>
                 </Tr>
+                <Tr>
+                  <Td><CustomLinkSGPA text='6th' url='' marginTop='' /></Td>
+                  <Td>6.59</Td>
+                </Tr>
               </Tbody>
             </Table>
           </TableContainer>
@@ -138,7 +142,8 @@ const AboutMe = () => {
               <li><Text>Power Electronics</Text></li>
               <li><Text>Control Systems</Text></li>
               <li><Text>Microprocessor and Microcontroller</Text></li>
-
+              <li><Text>Data Structures and Algorithms</Text></li>
+              <li><Text>Database Management System</Text></li>
             </ul>
           </Box>
 

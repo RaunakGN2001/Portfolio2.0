@@ -1,5 +1,14 @@
 const projectArr = [
     {
+        name: "Xquisite",
+        techStack: "ReactJS · NextJS · Zustand · Tailwind CSS · Shadcn UI · Prisma · MySQL",
+        imageURL: "/images/Xquisite_Banner.webp",
+        githubLink: "https://github.com/RaunakGN2001/Xquisite",
+        description: ["Xquisite is a robust e-commerce platform powered by Next.js 13 (App Router), React, and Tailwind CSS. It also features the dynamic Xquisite Admin dashboard for efficient multi-store management. The platform offers versatile content control encompassing categories, products, billboards, and filters, complemented by powerful search, pagination, and analytics features for seamless order placement and revenue insights.",
+        "Used Next.js and React for the frontend, integrated Prisma ORM with PlanetScale (MySQL) for database operations, and harnessed Shadcn UI and Tailwind CSS for an intuitive UI design. Incorporated Cloudinary for image uploads, Clerk Authentication for auth management and security, and Stripe as a reliable payment gateway. Achieved seamless global state management through Zustand, enhancing the user experience."
+        ]
+    }, 
+    {
         name: "Interacto",
         techStack: "ReactJS · NodeJS · ExpressJS · Socket.io · Mongo DB",
         imageURL: "/images/Interacto_Banner.webp",
