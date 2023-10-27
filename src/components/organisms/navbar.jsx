@@ -75,11 +75,9 @@ const Navbar = () => {
                     <ModalCloseButton color='white' _hover={{ color:'#eb2d72' }}/>
                     <ModalBody display='flex' justifyContent='center' alignItems='center' textColor='white'>
                         <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' flexDirection='column' justifyContent='center' alignItems='center' fontWeight='bold'>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/about">About Me</Link></ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/experiences">Experiences</Link></ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/projects">Projects</Link></ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/stats">Stats</Link></ListItem>
-                            <ListItem transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href="/guestbook">Guestbook</Link></ListItem>
+                        {menuItems.map(item => (
+                            <ListItem key={item.name} transition={'200ms ease-in-out'} _hover={{ fontWeight: 'bold', cursor: 'pointer', color:'#eb2d72', transform: 'scale(1.05)' }}><Link href={item.href}>{item.name}</Link></ListItem>
+                        ))}
                         </List>
                     </ModalBody>
                 </ModalContent>

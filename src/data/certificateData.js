@@ -26,10 +26,37 @@ const certificateArr = [
         name: 'Google HashCode 2022',
         issuedBy: 'Google',
         date: 'Feb, 2022',
-        imageURL: '/images/udemy.svg',
+        imageURL: '/images/google.svg',
         link: 'https://drive.google.com/file/d/1Tf6Ezcs9X2YJurKqYvHemp8dc5226fpE/view'
     }, 
-
+    {
+        name: 'Data Structures in C++',
+        issuedBy: 'Coding Ninjas',
+        date: 'Jan, 2022',
+        imageURL: '/images/codingNinjas.svg',
+        link: 'https://files.codingninjas.in/certificate18464846505b799202ad1020f08babb0add7f7d.pdf'
+    }, 
+    {
+        name: 'GWOC Token of Appreciation',
+        issuedBy: 'GirlScript Foundation',
+        date: 'Jan, 2022',
+        imageURL: '/images/GWOC.svg',
+        link: 'https://drive.google.com/file/d/1VrM5M2V90HsquC2_OrJf9bdhZSCOMGbO/view'
+    }, 
+    {
+        name: 'Google CodeJam 2021',
+        issuedBy: 'Google',
+        date: 'Mar, 2021',
+        imageURL: '/images/google.svg',
+        link: 'https://drive.google.com/file/d/1Lbm89ooAJIEOldYAqWzyAVuhTpCotLJu/view'
+    }, 
+    {
+        name: 'Google CodeJam 2022',
+        issuedBy: 'Google',
+        date: 'Apr, 2023',
+        imageURL: '/images/google.svg',
+        link: 'https://drive.google.com/file/d/1IpTtm4jtAeBX1lat6daMQkhbRygi_3Tz/view?usp=sharing'
+    }, 
 
 ]
 
