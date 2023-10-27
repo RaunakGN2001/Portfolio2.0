@@ -29,6 +29,15 @@ const ActiveLink = (href) => {
 
 const Navbar = () => {
 
+    const menuItems = [
+        { href: '/about', name: 'About Me' },
+        { href: '/experiences', name: 'Experiences' },
+        { href: '/projects', name: 'Projects' },
+        { href: '/stats', name: 'Stats' },
+        { href: '/certificates', name: 'Certificates'},
+        { href: '/guestbook', name: 'Guestbook' },
+    ];
+
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const { colorMode, toggleColorMode } = useColorMode();
@@ -49,11 +58,9 @@ const Navbar = () => {
             </Box>
             <Box display={{ base:'none', sm: 'none', md: 'none', lg: 'flex', xl: 'flex' }}>
                 <List fontSize={["12px", "15px", "17px"]} display='flex' gap='2rem' fontWeight='medium'>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/about" style={ActiveLink('/about')} >About Me</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href="/experiences" style={ActiveLink('/experiences')}>Experiences</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/projects')}><Link href='/projects'>Projects</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }} style={ActiveLink('/stats')}><Link href='/stats'>Stats</Link></ListItem>
-                    <ListItem transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href='/guestbook' style={ActiveLink('/guestbook')}>Guestbook</Link></ListItem>
+                    {menuItems.map(item => (
+                            <ListItem key={item.name} transition={'200ms ease-in-out'} _hover={{ color: '#d81159', cursor: 'pointer' }}><Link href={item.href} style={ActiveLink(`${item.href}`)}>{item.name}</Link></ListItem>
+                    ))}
                 </List>
             </Box>
             <Box display={{ base: 'flex', sm: 'flex', md: 'flex', lg: 'none', xl: 'none' }}>
