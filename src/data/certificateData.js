@@ -57,6 +57,22 @@ const certificateArr = [
         imageURL: '/images/google.svg',
         link: 'https://drive.google.com/file/d/1IpTtm4jtAeBX1lat6daMQkhbRygi_3Tz/view?usp=sharing'
     }, 
+    {
+        name: 'SQL ( Basic )',
+        issuedBy: 'HackerRank',
+        date: 'Oct, 2023',
+        imageURL: '/images/HackerRank.svg',
+        link: 'https://www.hackerrank.com/certificates/1406bcd9a9ae'
+
+    },
+    {
+        name: 'SQL ( Intermediate )',
+        issuedBy: 'HackerRank',
+        date: 'Oct, 2023',
+        imageURL: '/images/HackerRank.svg',
+        link: 'https://www.hackerrank.com/certificates/251784f5fb4a'
+
+    }
 
 ]
 

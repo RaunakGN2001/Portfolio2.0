@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Barlow } from 'next/font/google'
+import { Barlow, Alex_Brush } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Navbar from '@/components/organisms/navbar'
 import { Box, Link, Text, border, useColorModeValue } from '@chakra-ui/react'
@@ -15,7 +15,13 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 
 const barlow = Barlow({ 
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  subsets: ['latin'] })
+  subsets: ['latin'] });
+
+const alex_brush = Alex_Brush({
+  weight: ['400'],
+  subsets: ['latin'],
+});
+
 
 
 const MyImageOnLandingPage = (props) => {
